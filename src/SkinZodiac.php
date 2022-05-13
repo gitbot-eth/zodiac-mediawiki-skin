@@ -1,6 +1,6 @@
 <?php
 /**
- * Skin file for skin Peruna.
+ * Skin file for skin Zodiac.
  *
  * @file
  * @ingroup Skins
@@ -8,10 +8,10 @@
 
 
 /**
- * SkinTemplate class for Peruna skin
+ * SkinTemplate class for Zodiac skin
  * @ingroup Skins
  */
-class SkinPeruna extends SkinTemplate {
+class SkinZodiac extends SkinTemplate {
 	/**
 	 * This function adds JavaScript via ResourceLoader
 	 *
@@ -20,7 +20,7 @@ class SkinPeruna extends SkinTemplate {
 	 *
 	 * @param OutputPage $out
 	 */
-	
+
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
 		// Consider replacing with "responsive": true argument in skin.json

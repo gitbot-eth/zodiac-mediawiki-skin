@@ -4,9 +4,9 @@
  *
  * @ingroup Skins
  */
-class PerunaTemplate extends BaseTemplate
+class ZodiacTemplate extends BaseTemplate
 {
-	private function getPerunaFooterIcons() {
+	private function getZodiacFooterIcons() {
 		$footericons = $this->get( 'footericons' );
 		foreach ( $footericons as $footerIconsKey => &$footerIconsBlock ) {
 			foreach ( $footerIconsBlock as $footerIconKey => $footerIcon ) {
@@ -116,7 +116,7 @@ class PerunaTemplate extends BaseTemplate
 				<div class="footer">
 					<div>
 					<div class="footer-icons">
-							<?php foreach ($this->getPerunaFooterIcons() as $blockName => $footerIcons) : ?>
+							<?php foreach ($this->getZodiacFooterIcons() as $blockName => $footerIcons) : ?>
 								<div>
 									<?php foreach ($footerIcons as $icon) {
 										echo $this->getSkin()->makeFooterIcon($icon);

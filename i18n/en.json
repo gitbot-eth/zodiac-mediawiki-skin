@@ -1,7 +1,7 @@
 {
-    "@metadata": {
-		"authors": [ "Tassu" ]
-	},
-	"skinname-peruna": "Peruna",
-	"skindesc-peruna": "Tekniikkawikin tumma teema. Sopivan tyhmällä nimellä."
+  "@metadata": {
+    "authors": ["Tassu"]
+  },
+  "skinname-zodiac": "Zodiac",
+  "skindesc-zodiac": "Tekniikkawikin tumma teema. Sopivan tyhmällä nimellä."
 }

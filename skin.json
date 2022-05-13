@@ -1,51 +1,45 @@
 {
-    "name": "Peruna",
-    "author": "Taavi",
-    "url": "https://tassu.me",
-    "descriptionmsg": "skindesc-peruna",
-    "namemsg": "skinname-peruna",
-    "license-name": "MIT",
-	"type": "skin",
-	"manifest_version": 2,
-	"ValidSkinNames": {
-		"peruna": {
-			"class": "SkinPeruna",
-			"args": [
-				{
-					"name": "peruna",
-					"template": "PerunaTemplate",
-					"styles": [
-						"skins.peruna"
-					],
-					"scripts": [
-						"skins.peruna.js"
-					]
-				}
-			]
-		}
+  "name": "Zodiac",
+  "author": "Taavi",
+  "url": "https://tassu.me",
+  "descriptionmsg": "skindesc-zodiac",
+  "namemsg": "skinname-zodiac",
+  "license-name": "MIT",
+  "type": "skin",
+  "manifest_version": 2,
+  "ValidSkinNames": {
+    "zodiac": {
+      "class": "SkinZodiac",
+      "args": [
+        {
+          "name": "zodiac",
+          "template": "ZodiacTemplate",
+          "styles": ["skins.zodiac"],
+          "scripts": ["skins.zodiac.js"]
+        }
+      ]
+    }
+  },
+  "AutoloadClasses": {
+    "SkinZodiac": "src/SkinZodiac.php",
+    "ZodiacTemplate": "src/ZodiacTemplate.php"
+  },
+  "MessagesDirs": {
+    "Zodiac": "i18n"
+  },
+  "ResourceModules": {
+    "skins.zodiac": {
+      "styles": {
+        "dist/app.css": {}
+      }
     },
-    "AutoloadClasses": {
-		"SkinPeruna": "src/SkinPeruna.php",
-		"PerunaTemplate": "src/PerunaTemplate.php"
-	},
-	"MessagesDirs": {
-		"Peruna": "i18n"
-    },
-	"ResourceModules": {
-		"skins.peruna": {
-			"styles": {
-				"dist/app.css": {}
-			}
-		},
-		"skins.peruna.js": {
-			"scripts": [
-				"assets/js/app.js"
-			],
-			"dependencies": "jquery"
-		}
-	},
-	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteSkinPath": "Peruna"
-	}
+    "skins.zodiac.js": {
+      "scripts": ["assets/js/app.js"],
+      "dependencies": "jquery"
+    }
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "",
+    "remoteSkinPath": "Zodiac"
+  }
 }
