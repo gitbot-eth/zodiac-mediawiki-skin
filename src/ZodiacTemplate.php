@@ -51,15 +51,16 @@ class ZodiacTemplate extends BaseTemplate
 	</div>
 
 	<div class="md:flex">
-		<div class="flex-none w-full md:max-w-xs p-6 max-md:hidden" id="sidebar">
-			<a href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href']); ?>" <?php echo Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs('p-logo')) ?>>
-				<img src="<?php $this->text('logopath'); ?>" alt="<?php $this->text('sitename') ?>">
-			</a>
+		<div class="flex-none w-full md:max-w-xs p-6 max-md:hidden space-y-4" id="sidebar">
 			<?php foreach ($this->getSidebar() as $boxName => $box) : ?>
-				<div id="<?php echo Sanitizer::escapeIdForAttribute($box['id']) ?>" <?php echo Linker::tooltip($box['id']) ?>>
-					<h5><?php echo htmlspecialchars($box['header']); ?></h5>
+				<div 
+					class="bg-brown-900 border-2 border-double border-brown-500 bg-blur-12 shadow-2xl p-4"
+					id="<?php echo Sanitizer::escapeIdForAttribute($box['id']) ?>" <?php echo Linker::tooltip($box['id']) ?>
+				>
+					<h5 class="mt-0 font-mono"><?php echo htmlspecialchars($box['header']); ?></h5>
+					<div class="h-px w-full bg-brown-500 mt-2 mb-4"></div>
 					<?php if (is_array($box['content'])) : ?>
-						<ul class="sidebar-list">
+						<ul class="sidebar-list text-xs">
 							<?php foreach ($box['content'] as $key => $item) {
 								echo $this->makeListItem($key, $item);
 							} ?>
@@ -74,7 +75,7 @@ class ZodiacTemplate extends BaseTemplate
 
 		</div>
 		<div class="flex-1 p-6">
-			<div class="container max-md:px-6 mx-auto pt-6">
+			<div class="container max-md:px-6 mx-auto p-6 border-2 border-double border-brown-500 bg-brown-900 bg-opacity-80 bg-blur-12 shadow-2xl">
 				<?php if ($this->data['newtalk']) : ?>
 					<div class="line-usermessage">
 						<?php $this->html('newtalk'); ?>

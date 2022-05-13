@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Spectral:wght@200;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply bg-brown-800 font-serif font-thin;
+    background-attachment: fixed;
+    background-image: url("../assets/images/zodiac-wiki-bg.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-blur-12 {
+    backdrop-filter: blur(12px);
+}
+
 a, .link {
-    @apply text-blue-300;
+    @apply text-zodiacGreen-300;
 
     &:hover {
         @apply underline;
@@ -20,7 +33,7 @@ a, .link {
 
 .sidebar-list {
     li {
-        @apply p-0 mb-1 pl-4 text-gray-400 leading-none;
+        @apply p-0 text-gray-400 leading-none mt-2;
     }
 }
 
@@ -94,7 +107,7 @@ input:not([type]), input[type=text], input[type=search] {
         }
 
         div.suggestion-result-current {
-            @apply bg-blue-800 text-white;
+            @apply bg-green-800 text-white;
         }
 
         div.special-query {

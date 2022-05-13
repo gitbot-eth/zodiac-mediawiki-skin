@@ -25,6 +25,6 @@ class SkinZodiac extends SkinTemplate {
 		parent::initPage( $out );
 		// Consider replacing with "responsive": true argument in skin.json
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
-		$out->addBodyClasses( 'text-gray-200 bg-black' );
+		$out->addBodyClasses( 'text-gray-200' );
 	}
 }
