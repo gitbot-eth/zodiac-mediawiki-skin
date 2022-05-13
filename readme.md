@@ -22,7 +22,7 @@
 8. open "localhost:8080"
 9. `cd skins/`
 10. `git clone https://github.com/gitbot-eth/zodiac-wikimedia-skin.git zodiac`
-11. open LocalSettings.php (at the root of the project)
+11. open LocalSettings.php (at the root of the mediawiki directory)
 12. add `wfLoadSkin( 'zodiac' );` to the LocalSettings.php file, above the `$wgDefaultSkin` variable.
 13. set `$wgDefaultSkin = "zodiac";`
 14. save the file
