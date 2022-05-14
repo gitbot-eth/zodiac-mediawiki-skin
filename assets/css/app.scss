@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Spectral:wght@200;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply bg-brown-800 font-serif font-thin;
+    background-attachment: fixed;
+    background-image: url("../assets/images/zodiac-wiki-bg.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-blur-12 {
+    backdrop-filter: blur(12px);
+}
+
 a, .link {
-    @apply text-blue-300;
+    @apply text-zodiacGreen-300;
 
     &:hover {
         @apply underline;
@@ -20,7 +33,22 @@ a, .link {
 
 .sidebar-list {
     li {
-        @apply p-0 mb-1 pl-4 text-gray-400 leading-none;
+        @apply p-0 text-brown-400 leading-none mt-2;
+    }
+}
+
+.content-actions {
+    li {
+        @apply font-mono text-sm bg-brown-800 border border-brown-500 text-brown-300 px-2 py-1 leading-none;
+        a {
+            @apply text-brown-300;
+        }
+        &.selected {
+            @apply bg-brown-500;
+            a {
+                @apply text-white;
+            }
+        }
     }
 }
 
@@ -44,19 +72,19 @@ a, .link {
         @apply mr-2;
 
         a {
-            @apply text-gray-400 text-sm;
+            @apply text-brown-400 text-sm;
         }
     }
 }
 
 .catlinks {
-    @apply p-2 bg-black border border-gray-900 rounded mt-4;
+    @apply p-2 bg-black border border-brown-900 rounded mt-4;
 
     li {
         border-left: 1px solid #5c6370;
 
         a {
-            @apply text-gray-400;
+            @apply text-brown-400;
         }
 
         a.new {
@@ -66,7 +94,7 @@ a, .link {
 }
 
 div.mw-search-profile-tabs {
-    @apply bg-gray-900 border border-gray-700 text-white;
+    @apply bg-brown-900 border border-brown-500 text-white;
 
     ul {
         list-style-type: none;
@@ -78,23 +106,23 @@ div.mw-search-profile-tabs {
 }
 
 .oo-ui-popupWidget-popup {
-    @apply text-gray-800;
+    @apply text-brown-800;
 }
 
 input:not([type]), input[type=text], input[type=search] {
-    @apply py-1 px-2 text-white bg-gray-900;
+    @apply py-1 px-2 text-white bg-brown-800;
 }
 
 .suggestions {
     div.suggestions-results, div.suggestions-special {
-        @apply bg-gray-900 text-white border-gray-800 border;
+        @apply bg-brown-900 text-white border-brown-800 border;
 
         .suggestions-result {
             @apply text-white;
         }
 
         div.suggestion-result-current {
-            @apply bg-blue-800 text-white;
+            @apply bg-green-800 text-white;
         }
 
         div.special-query {
@@ -103,10 +131,10 @@ input:not([type]), input[type=text], input[type=search] {
     }
 }
 
-#toc {
+#toc input[type=search] {
     display: table;
     background: #0c1016;
-    @apply p-2 my-2 text-white border border-gray-900;
+    @apply p-2 my-2 text-white border border-brown-900;
 
     .tocnumber {
         @apply text-white;
@@ -122,13 +150,13 @@ input:not([type]), input[type=text], input[type=search] {
         padding: 0;
 
         li a {
-            @apply text-gray-500;
+            @apply text-brown-500;
         }
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    @apply text-gray-100 leading-none p-0 m-0 mt-4 mb-1 font-bold;
+    @apply text-brown-100 leading-none p-0 m-0 mt-4 mb-1 font-bold;
 }
 
 h1 {
@@ -153,7 +181,7 @@ h6 {
 
 .thumb {
     background: #0c1016 !important;
-    @apply p-2 m-2 border border-gray-900 text-gray-100;
+    @apply p-2 m-2 border border-brown-900 text-brown-100;
 
     .thumbcaption {
         @apply mt-2;
@@ -169,7 +197,7 @@ h6 {
 
 table.wikitable, table.mw-datatable, table.mw-abuselog-details {
     background: #0c1016 !important;
-    @apply text-gray-200 border border-gray-900;
+    @apply text-brown-200 border border-brown-900;
 
     .sv-space {
         display: none;
@@ -214,11 +242,11 @@ table {
 
 .personal-tools {
     #pt-notifications-alert a.mw-echo-notifications-badge:before {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22lightgray%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E bell %3C/title%3E %3Cpath d=%22M16 7a5.38 5.38 0 0 0-4.46-4.85C11.6 1.46 11.53 0 10 0S8.4 1.46 8.46 2.15A5.38 5.38 0 0 0 4 7v6l-2 2v1h16v-1l-2-2zm-6 13a3 3 0 0 0 3-3H7a3 3 0 0 0 3 3z%22/%3E %3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22lightbrown%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E bell %3C/title%3E %3Cpath d=%22M16 7a5.38 5.38 0 0 0-4.46-4.85C11.6 1.46 11.53 0 10 0S8.4 1.46 8.46 2.15A5.38 5.38 0 0 0 4 7v6l-2 2v1h16v-1l-2-2zm-6 13a3 3 0 0 0 3-3H7a3 3 0 0 0 3 3z%22/%3E %3C/svg%3E");
     }
 
     #pt-notifications-notice .mw-echo-notifications-badge:before {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22lightgray%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E tray %3C/title%3E %3Cpath d=%22M17 1H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm0 12h-4l-1 2H8l-1-2H3V3h14z%22/%3E %3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22lightbrown%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E tray %3C/title%3E %3Cpath d=%22M17 1H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm0 12h-4l-1 2H8l-1-2H3V3h14z%22/%3E %3C/svg%3E");
     }
 }
 
@@ -252,7 +280,8 @@ table {
 }
 
 .footer {
-    @apply mt-12;
+    @apply mt-6 p-6 bg-brown-900 bg-opacity-80 border-brown-500 border-2 border-double;
+    backdrop-filter: blur(12px);
 
     ul {
         @apply ml-0;
@@ -277,7 +306,7 @@ table {
     background-color: #0b0d11;
 
     &.oo-ui-widget-enabled {
-        @apply bg-gray-900;
+        @apply bg-brown-900;
     }
 }
 
@@ -291,7 +320,7 @@ a.image img {
 }
 
 select, button, input {
-    @apply bg-gray-900 border border-black rounded-sm shadow text-gray-100 p-1;
+    @apply bg-brown-900 border border-black rounded-sm shadow text-brown-100 p-1;
 
     &:disabled {
         @apply text-red-200 italic;
@@ -299,7 +328,7 @@ select, button, input {
 }
 
 .diff-context {
-    @apply bg-gray-900 text-white border-gray-800;
+    @apply bg-brown-900 text-white border-brown-800;
 }
 
 .diffchange {
@@ -307,7 +336,7 @@ select, button, input {
 }
 
 #pagehistory li.selected {
-    @apply bg-gray-900 border-gray-800 text-gray-100;
+    @apply bg-brown-900 border-brown-800 text-brown-100;
 }
 
 .printfooter {
