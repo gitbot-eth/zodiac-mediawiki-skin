@@ -26,20 +26,20 @@ class ZodiacTemplate extends BaseTemplate
 		$this->html('headelement'); ?>
 
 	<div class="relative w-full px-6 pt-10 mx-auto mb-2">
+		<div class="md:absolute top-0 mt-2 md:mt-6 w-full left-0 px-6">
+			<ul class="flex flex-wrap justify-center md:justify-end list-reset personal-tools">
+				<?php foreach ($this->getPersonalTools() as $key => $item) {
+					echo $this->makeListItem($key, $item);
+				} ?>
+			</ul>
+		</div>
 		<div class="flex flex-col items-center justify-center w-full">
-			<h1 class="text-5xl font-thin leading-none tracking-widest uppercase text-brown-200">Zodiac Wiki</h1>
+			<h1 class="text-3xl md:text-5xl font-thin leading-none tracking-widest uppercase text-brown-200">Zodiac Wiki</h1>
 			<div class="flex items-center w-full space-x-6 md:space-x-12">
 				<div class="w-full h-2 border-t-2 border-b-2 border-brown-200"></div>
 				<img src="/w/skins/Zodiac/assets/images/orb.png" alt="Gnosis Guild orb" class="w-16">
 				<div class="w-full h-2 border-t-2 border-b-2 border-brown-200"></div>
 			</div>
-		</div>
-		<div class="absolute top-6 right-6">
-			<ul class="flex flex-wrap list-reset max-md:mt-4 personal-tools">
-				<?php foreach ($this->getPersonalTools() as $key => $item) {
-					echo $this->makeListItem($key, $item);
-				} ?>
-			</ul>
 		</div>
 	</div>
 	<div class="flex flex-wrap items-center justify-between p-2">
