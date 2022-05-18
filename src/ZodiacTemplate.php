@@ -90,9 +90,9 @@ class ZodiacTemplate extends BaseTemplate
 								echo $this->makeListItem($key, $tab);
 							} ?>
 						</ul>
-						<form action="<?php $this->text('wgScript'); ?>" class="inline-block mb-0 ml-2">
+						<form action="<?php $this->text('wgScript'); ?>" class="inline-block mb-0 ml-2 w-64">
 							<input type="hidden" name="title" value="<?php $this->text('searchtitle') ?>" />
-							<?php echo $this->makeSearchInput(['id' => 'searchInput']); ?>
+							<?php echo $this->makeSearchInput(['id' => 'searchInput', 'class' => 'w-full']); ?>
 						</form>
 					</div>
 				</div>
