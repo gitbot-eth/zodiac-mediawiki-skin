@@ -30,8 +30,12 @@ module.exports = {
       },
       purple: {
         400: "#9987C1",
-        // 600: "#584974",
       },
+      blue: {
+        300: "#8BA0A5",
+        600: "#475992",
+        800: "#223265",
+      }
     },
     fontFamily: {
       mono: "Roboto Mono, ui-monospace, monospace",

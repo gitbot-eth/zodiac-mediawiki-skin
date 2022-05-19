@@ -1,0 +1,112 @@
+
+
+
+// oo-ui
+
+div.oo-ui-popupWidget-popup {
+  @apply text-brown-800;
+}
+
+div.oo-ui-tabSelectWidget-framed {
+  @apply bg-brown-900;
+}
+
+div.oo-ui-tabOptionWidget {
+  @apply text-white text-opacity-25;
+}
+
+div.mw-rcfilters-ui-filterTagMultiselectWidget.oo-ui-widget-enabled .oo-ui-tagMultiselectWidget-handle {
+  @apply border border-brown-500;
+}
+
+div.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagMultiselectWidget-handle {
+  background-color: #170B05 !important;
+}
+
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled > a.oo-ui-buttonElement-button:hover {
+  @apply text-white;
+}
+
+.mw-prefs-tabs-wrapper.oo-ui-layout.oo-ui-panelLayout.oo-ui-panelLayout-framed {
+  @apply border-brown-500;
+}
+
+span.oo-ui-icon-collapse, span.mw-ui-icon-collapse:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='%23ffffff'%3E%3Ctitle%3E collapse %3C/title%3E%3Cpath d='m2.5 15.25 7.5-7.5 7.5 7.5 1.5-1.5-9-9-9 9z'/%3E%3C/svg%3E");
+}
+
+span.oo-ui-icon-expand, span.mw-ui-icon-expand:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='%23ffffff'%3E%3Ctitle%3E expand %3C/title%3E %3Cpath d=%22m17.5 4.75-7.5 7.5-7.5-7.5L1 6.25l9 9 9-9z%22/%3E %3C/svg%3E")
+}
+
+span.oo-ui-icon-bookmark, span.mw-ui-icon-bookmark:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 fill='%23ffffff' viewBox=%220 0 20 20%22%3E %3Ctitle%3E bookmark %3C/title%3E %3Cpath d=%22M5 1a2 2 0 0 0-2 2v16l7-5 7 5V3a2 2 0 0 0-2-2z%22/%3E %3C/svg%3E")
+}
+
+span.oo-ui-icon-history, span.mw-ui-icon-history:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 fill='%23ffffff' viewBox=%220 0 20 20%22%3E %3Ctitle%3E history %3C/title%3E %3Cpath d=%22M9 6v5h.06l2.48 2.47 1.41-1.41L11 10.11V6z%22/%3E %3Cpath d=%22M10 1a9 9 0 0 0-7.85 13.35L.5 16H6v-5.5l-2.38 2.38A7 7 0 1 1 10 17v2a9 9 0 0 0 0-18z%22/%3E %3C/svg%3E")
+}
+
+span.oo-ui-icon-trash, span.mw-ui-icon-trash:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 fill='%23ffffff' viewBox=%220 0 20 20%22%3E %3Ctitle%3E trash %3C/title%3E %3Cpath d=%22M17 2h-3.5l-1-1h-5l-1 1H3v2h14zM4 17a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5H4z%22/%3E %3C/svg%3E")
+}
+
+.oo-ui-buttonElement-framed .oo-ui-buttonElement-button > span.oo-ui-icon-bookmark, span.mw-ui-icon-bookmark:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E bookmark %3C/title%3E %3Cpath d=%22M5 1a2 2 0 0 0-2 2v16l7-5 7 5V3a2 2 0 0 0-2-2z%22/%3E %3C/svg%3E")
+}
+
+.oo-ui-tagMultiselectWidget-handle .oo-ui-buttonElement-frameless.oo-ui-widget-enabled span.oo-ui-labelElement-label {
+  @apply text-white;
+}
+
+
+.oo-ui-inputWidget-input,
+.oo-ui-textInputWidget .oo-ui-inputWidget-input {
+    @apply bg-brown-900 border border-brown-500 text-white;
+}
+
+.oo-ui-labelWidget.oo-ui-inline-help {
+    @apply text-brown-400;
+}
+
+span.oo-ui-indicator-down {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22%23ffffff%22 width=%2212%22 height=%2212%22 viewBox=%220 0 12 12%22%3E %3Ctitle%3E down %3C/title%3E %3Cpath d=%22M9.9 2.9 6 6.8 2.1 2.9 1 4l5 5 5-5z%22/%3E %3C/svg%3E")
+}
+
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:hover,
+.oo-ui-dropdownWidget.oo-ui-widget-enabled.oo-ui-dropdownWidget-open .oo-ui-dropdownWidget-handle,
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle {
+    @apply bg-brown-900 border border-brown-500 text-white rounded-none;
+}
+
+.oo-ui-menuOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget {
+    @apply text-white;
+}
+
+.oo-ui-menuOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget:hover {
+    @apply bg-brown-800 bg-opacity-50;
+}
+
+.oo-ui-menuSelectWidget:not(.mw-rcfilters-ui-menuSelectWidget) {
+    background-color: #0b0d11;
+
+    &.oo-ui-widget-enabled {
+        @apply bg-brown-900;
+    }
+}
+
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-selected {
+    @apply bg-black;
+}
+
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
+    @apply bg-blue-800 border-blue-600;
+}
+
+.oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:checked + span, .oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:indeterminate + span {
+    @apply bg-blue-600 border-blue-600;
+}
+
+.oo-ui-radioInputWidget.oo-ui-widget-enabled [type='radio']:checked + span {
+    @apply border-blue-600;
+}

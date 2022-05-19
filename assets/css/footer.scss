@@ -1,0 +1,22 @@
+.footer {
+  @apply mt-6 p-6 bg-brown-900 bg-opacity-80 border-brown-500 border-2 border-double mx-auto max-w-screen-xl;
+  backdrop-filter: blur(12px);
+
+  ul {
+      @apply ml-0;
+
+      li {
+          @apply inline-block mr-4;
+      }
+  }
+
+  .footer-icons {
+      display: inline-block;
+      float: right;
+
+      & div {
+          @apply mr-2 inline-block;
+      }
+  }
+
+}

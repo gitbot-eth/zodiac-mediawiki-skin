@@ -96,36 +96,75 @@ class ZodiacTemplate extends BaseTemplate
 					</div>
 				</div>
 				<div class="container p-6 mx-auto border-2 border-double shadow-2xl max-md:px-6 border-brown-500 bg-brown-900 bg-opacity-80 bg-blur-12">
+
 					<?php if ($this->data['newtalk']) : ?>
-						<div class="line-usermessage">
-							<?php $this->html('newtalk'); ?>
+							<div class="line-usermessage">
+								<?php $this->html('newtalk'); ?>
+							</div>
+						<?php endif; ?>
+
+						<div id="sitenotice">
+							<?php $this->html('sitenotice'); ?>
 						</div>
-					<?php endif; ?>
 
-					<div id="sitenotice">
-						<?php $this->html('sitenotice'); ?>
+						<div class="page-title">
+
+							<?php echo $this->getIndicators(); ?>
+							<h1 class="p-0 m-0 leading-none"><?php $this->html('title'); ?></h1>
+
+							<?php if ($this->data['isarticle']) {
+								echo '<div class="text-xs text-brown-500 mt-1">';
+								$this->msg('tagline');
+								echo '</div>';
+							} ?>
+
+							<?php $this->html('subtitle'); ?>
+							<?php $this->html('undelete'); ?>
+						</div>
+
+					<div class="lg:flex flex-row-reverse">
+						<!-- Info Box
+						<div class="lg:w-64 lg:ml-6 info-box">
+							<div class="bg-brown-900 border border-brown-500 p-4">
+								<h3 class="mt-0">Exit Pattern</h3>
+								<img src="/w/skins/zodiac/assets/images/exit-badge.png" alt="Exit Pattern" class="w-full object-center object-contain h-24 mt-4" />
+								<div class="flex justify-between items-center mt-4 font-mono text-sm">
+									Pattern
+									<a href="#">
+										Exit
+									</a>
+								</div>
+								<div class="flex justify-between items-center mt-4 font-mono text-sm">
+									Type
+									<a href="#">
+										Module
+									</a>
+								</div>
+								<div class="flex justify-between items-center mt-4 font-mono text-sm">
+									Repository
+									<a href="#">
+										Github
+									</a>
+								</div>
+								<div class="flex justify-between items-center mt-4 font-mono text-sm">
+									App
+									<a href="#">
+										Exit App
+									</a>
+								</div>
+								<div class="border-t border-brown-500 pt-4 mt-4 text-xs text-brown-200">
+									The Zodiac Exit Module allows members to redeem a designated token, including an NFT, for a proportional share of an avatar's (account's) digital assets, similar to Moloch DAO's rageQuit() function. Members can use the Exit App to redeem their tokens.
+								</div>
+							</div>
+						</div> -->
+						<div class="flex-1 mt-6 lg:mt-0">
+							<div class="articlebody">
+								<?php $this->html('bodytext'); ?>
+							</div>
+							<?php $this->html('dataAfterContent'); ?>
+							<?php $this->html('catlinks'); ?>
+						</div>
 					</div>
-
-					<div class="page-title">
-
-						<?php echo $this->getIndicators(); ?>
-						<h1 class="p-0 m-0 leading-none"><?php $this->html('title'); ?></h1>
-
-						<?php if ($this->data['isarticle']) {
-							echo '<div class="text-xs text-brown-500 mt-1">';
-							$this->msg('tagline');
-							echo '</div>';
-						} ?>
-
-						<?php $this->html('subtitle'); ?>
-						<?php $this->html('undelete'); ?>
-					</div>
-
-					<div class="articlebody">
-						<?php $this->html('bodytext'); ?>
-					</div>
-					<?php $this->html('dataAfterContent'); ?>
-					<?php $this->html('catlinks'); ?>
 
 				</div>
 
