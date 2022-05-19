@@ -28,9 +28,13 @@ module.exports = {
         600: "#68A12E",
         800: "#4B7B19",
       },
+      purple: {
+        400: "#9987C1",
+        // 600: "#584974",
+      },
     },
     fontFamily: {
-      mono: "Roboto Mono, ui-monospace",
+      mono: "Roboto Mono, ui-monospace, monospace",
       serif: "Spectral, Georgia, ui-serif",
     },
     extend: {
