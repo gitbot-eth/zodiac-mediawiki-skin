@@ -37,7 +37,7 @@ class ZodiacTemplate extends BaseTemplate
 			<h1 class="text-3xl md:text-5xl font-thin leading-none tracking-widest uppercase text-brown-200">Zodiac Wiki</h1>
 			<div class="flex items-center w-full space-x-6 md:space-x-12">
 				<div class="w-full h-2 border-t-2 border-b-2 border-brown-200"></div>
-				<img src="/w/skins/Zodiac/assets/images/orb.png" alt="Gnosis Guild orb" class="w-16">
+				<img src="skins/zodiac/assets/images/orb.png" alt="Gnosis Guild orb" class="w-16">
 				<div class="w-full h-2 border-t-2 border-b-2 border-brown-200"></div>
 			</div>
 		</div>
@@ -61,7 +61,7 @@ class ZodiacTemplate extends BaseTemplate
 		<div class="md:flex">
 			<div class="flex-none w-full p-6 space-y-4 md:max-w-xs max-md:hidden" id="sidebar">
 				<?php foreach ($this->getSidebar() as $boxName => $box) : ?>
-					<div 
+					<div
 						class="p-4 border-2 border-double shadow-2xl bg-brown-900 border-brown-500 bg-blur-12"
 						id="<?php echo Sanitizer::escapeIdForAttribute($box['id']) ?>" <?php echo Linker::tooltip($box['id']) ?>
 					>
@@ -80,7 +80,7 @@ class ZodiacTemplate extends BaseTemplate
 					?>
 					</div>
 				<?php endforeach; ?>
-	
+
 			</div>
 			<div class="flex-1 p-6">
 				<div id="p-cactions">
@@ -102,26 +102,26 @@ class ZodiacTemplate extends BaseTemplate
 							<?php $this->html('newtalk'); ?>
 						</div>
 					<?php endif; ?>
-	
+
 					<div id="sitenotice">
 						<?php $this->html('sitenotice'); ?>
 					</div>
-	
+
 					<div class="page-title">
-	
+
 						<?php echo $this->getIndicators(); ?>
 						<h1 class="p-0 m-0 text-4xl leading-none text-gray-100"><?php $this->html('title'); ?></h1>
-	
+
 						<?php if ($this->data['isarticle']) {
 							echo '<div>';
 							$this->msg('tagline');
 							echo '</div>';
 						} ?>
-	
+
 						<?php $this->html('subtitle'); ?>
 						<?php $this->html('undelete'); ?>
 					</div>
-	
+
 					<div class="articlebody">
 						<?php $this->html('bodytext'); ?>
 					</div>

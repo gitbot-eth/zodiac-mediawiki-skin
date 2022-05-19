@@ -1,5 +1,5 @@
 {
-  "name": "Zodiac",
+  "name": "zodiac",
   "author": "Taavi",
   "url": "https://tassu.me",
   "descriptionmsg": "skindesc-zodiac",
@@ -25,7 +25,7 @@
     "ZodiacTemplate": "src/ZodiacTemplate.php"
   },
   "MessagesDirs": {
-    "Zodiac": "i18n"
+    "zodiac": "i18n"
   },
   "ResourceModules": {
     "skins.zodiac": {
@@ -40,6 +40,6 @@
   },
   "ResourceFileModulePaths": {
     "localBasePath": "",
-    "remoteSkinPath": "Zodiac"
+    "remoteSkinPath": "zodiac"
   }
 }
