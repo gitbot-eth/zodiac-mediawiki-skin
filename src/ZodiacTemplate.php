@@ -65,7 +65,16 @@ class ZodiacTemplate extends BaseTemplate
 						class="p-4 border-2 border-double shadow-2xl bg-brown-900 border-brown-500 bg-blur-12"
 						id="<?php echo Sanitizer::escapeIdForAttribute($box['id']) ?>" <?php echo Linker::tooltip($box['id']) ?>
 					>
-						<h5 class="mt-0 font-mono mb-4"><?php echo htmlspecialchars($box['header']); ?></h5>
+						<?php if($box['id'] === 'p-Patterns') : ?>
+							<img class="w-8 h-8 mb-1" src="<?php echo $GLOBALS['wgResourceBasePath'] ?>/skins/zodiac/assets/images/patterns-orb.png" alt="Patterns Category orb" />
+						<?php elseif($box['id'] === 'p-Library') : ?>
+							<img class="w-8 h-8 mb-1" src="<?php echo $GLOBALS['wgResourceBasePath'] ?>/skins/zodiac/assets/images/library-orb.png" alt="Library Category orb" />
+						<?php elseif($box['id'] === 'p-Documentation') : ?>
+							<img class="w-8 h-8 mb-1" src="<?php echo $GLOBALS['wgResourceBasePath'] ?>/skins/zodiac/assets/images/documentation-orb.png" alt="Documentation Category orb" />
+						<?php endif ?>
+						<h5 class="mt-0 font-mono mb-4">
+							<?php echo htmlspecialchars($box['header']); ?>
+						</h5>
 						<?php if (is_array($box['content'])) : ?>
 							<ul class="text-xs sidebar-list">
 								<?php foreach ($box['content'] as $key => $item) {
