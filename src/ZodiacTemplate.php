@@ -58,8 +58,8 @@ class ZodiacTemplate extends BaseTemplate
 	</div>
 
 	<div class="flex flex-col flex-grow">
-		<div class="md:flex md:justify-center">
-			<div class="flex-none w-full p-6 space-y-4 md:max-w-xs max-md:hidden" id="sidebar">
+		<div class="md:flex md:justify-center px-6">
+			<div class="flex-none w-full md:w-48 lg:w-full p-2 lg:p-6 space-y-4 md:max-w-xs max-md:hidden" id="sidebar">
 				<?php foreach ($this->getSidebar() as $boxName => $box) : ?>
 					<div
 						class="p-4 border-2 border-double shadow-2xl bg-brown-900 border-brown-500 bg-blur-12"
@@ -81,7 +81,7 @@ class ZodiacTemplate extends BaseTemplate
 				<?php endforeach; ?>
 
 			</div>
-			<div class="flex-1 p-6 xl:max-w-screen-lg">
+			<div class="flex-1 p-2 lg:p-6 xl:max-w-screen-lg">
 				<div id="p-cactions">
 					<div class="container flex items-center justify-between mx-auto mb-2">
 						<ul class="flex flex-wrap items-center list-reset md:space-x-2 content-actions">
@@ -95,7 +95,7 @@ class ZodiacTemplate extends BaseTemplate
 						</form>
 					</div>
 				</div>
-				<div class="container p-6 mx-auto border-2 border-double shadow-2xl max-md:px-6 border-brown-500 bg-brown-900 bg-opacity-80 bg-blur-12">
+				<div class="p-6 mx-auto border-2 border-double shadow-2xl border-brown-500 bg-brown-900 bg-opacity-80 bg-blur-12">
 
 					<?php if ($this->data['newtalk']) : ?>
 							<div class="line-usermessage">

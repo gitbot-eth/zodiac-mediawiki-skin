@@ -706,8 +706,11 @@ table.wikitable td, table.mw-datatable td, table.mw-abuselog-details td {
 }
 
 p {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
 }
 
 textarea {
@@ -1119,6 +1122,10 @@ div.mw-search-profile-tabs .current a {
 
 .mwe-popups .mwe-popups-extract::after {
   background-image: none !important;
+}
+
+#editpage-copywarn {
+  margin-top: 1.5rem;
 }
 
 .mw-editform {

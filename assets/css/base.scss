@@ -76,7 +76,10 @@ table.wikitable, table.mw-datatable, table.mw-abuselog-details {
 }
 
 p {
-  @apply my-1;
+  @apply mb-2;
+  &:last-of-type {
+    @apply mb-0;
+  }
 }
 
 textarea {
