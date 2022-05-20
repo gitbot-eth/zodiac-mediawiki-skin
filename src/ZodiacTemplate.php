@@ -37,7 +37,7 @@ class ZodiacTemplate extends BaseTemplate
 			<h1 class="text-3xl md:text-5xl font-thin leading-none tracking-widest uppercase text-brown-200 border-0">Zodiac Wiki</h1>
 			<div class="flex items-center w-full space-x-6 md:space-x-12">
 				<div class="w-full h-2 border-t-2 border-b-2 border-brown-200"></div>
-				<img src="../skins/zodiac/assets/images/orb.png" alt="Gnosis Guild orb" class="w-16">
+				<img src="<?php echo $GLOBALS['wgResourceBasePath'] ?>/skins/zodiac/assets/images/orb.png" alt="Gnosis Guild orb" class="w-16">
 				<div class="w-full h-2 border-t-2 border-b-2 border-brown-200"></div>
 			</div>
 		</div>
