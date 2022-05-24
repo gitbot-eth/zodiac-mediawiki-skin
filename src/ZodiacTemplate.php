@@ -25,7 +25,7 @@ class ZodiacTemplate extends BaseTemplate
 	{
 		$this->html('headelement'); ?>
 
-	<div class="relative w-full px-6 pt-10 mx-auto mb-2">
+	<div class="relative w-full px-2 md:px-6 pt-10 mx-auto mb-2">
 		<div class="md:absolute top-0 mt-2 md:mt-6 w-full left-0 px-6">
 			<ul class="flex flex-wrap justify-center md:justify-end list-reset personal-tools">
 				<?php foreach ($this->getPersonalTools() as $key => $item) {
@@ -45,7 +45,7 @@ class ZodiacTemplate extends BaseTemplate
 	<div class="flex flex-wrap items-center justify-between p-2">
 		<div>
 
-			<div class="inline-block ml-4 md:hidden">
+			<div class="inline-block mb-4 md:hidden">
 				<button id="toggle-navigation" class="link">
 					Menu
 				</button>
@@ -57,9 +57,9 @@ class ZodiacTemplate extends BaseTemplate
 		</div>
 	</div>
 
-	<div class="flex flex-col flex-grow">
-		<div class="md:flex md:justify-center px-2 md:px-6">
-			<div class="flex-none w-full md:w-48 lg:w-full p-2 lg:p-6 space-y-4 md:max-w-xs max-md:hidden" id="sidebar">
+	<div class="flex flex-col flex-grow px-2 md:px-6">
+		<div class="grid grid-cols-12 gap-6 lg:gap-12 mx-auto max-w-screen-xl">
+			<div class="flex-none space-y-4 col-start-1 col-end-13 md:col-end-5 lg:col-end-4 max-md:hidden" id="sidebar">
 				<?php foreach ($this->getSidebar() as $boxName => $box) : ?>
 					<div
 						class="p-4 border-2 border-double shadow-2xl bg-brown-900 border-brown-500 bg-blur-12"
@@ -90,15 +90,15 @@ class ZodiacTemplate extends BaseTemplate
 				<?php endforeach; ?>
 
 			</div>
-			<div class="flex-1 p-2 lg:p-6 xl:max-w-screen-lg">
+			<div class="flex-1 col-start-1 col-span-12 md:col-start-5 lg:col-start-4 md:col-span-9">
 				<div id="p-cactions">
-					<div class="container flex items-center justify-between mx-auto mb-2">
-						<ul class="flex flex-wrap items-center list-reset md:space-x-2 content-actions">
+					<div class="container md:flex items-center justify-between mx-auto mb-4">
+						<ul class="flex flex-wrap items-center list-reset space-x-2 content-actions">
 							<?php foreach ($this->data['content_actions'] as $key => $tab) {
 								echo $this->makeListItem($key, $tab);
 							} ?>
 						</ul>
-						<form action="<?php $this->text('wgScript'); ?>" class="inline-block mb-0 ml-2 w-64">
+						<form action="<?php $this->text('wgScript'); ?>" class="inline-block mb-0 mt-2 md:mt-0 md:ml-2 w-full md:w-64">
 							<input type="hidden" name="title" value="<?php $this->text('searchtitle') ?>" />
 							<?php echo $this->makeSearchInput(['id' => 'searchInput', 'class' => 'w-full']); ?>
 						</form>
