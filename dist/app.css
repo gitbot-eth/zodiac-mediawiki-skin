@@ -745,6 +745,21 @@ code {
 
 table {
   border-collapse: separate;
+  table-layout: fixed;
+}
+
+@media (max-width: 1024px) {
+  table {
+    width: 100% !important;
+    overflow-x: auto;
+    display: block;
+  }
+
+  td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+  }
 }
 
 input:not([type]), input[type=text], input[type=search] {

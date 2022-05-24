@@ -58,7 +58,7 @@ class ZodiacTemplate extends BaseTemplate
 	</div>
 
 	<div class="flex flex-col flex-grow">
-		<div class="md:flex md:justify-center px-6">
+		<div class="md:flex md:justify-center px-2 md:px-6">
 			<div class="flex-none w-full md:w-48 lg:w-full p-2 lg:p-6 space-y-4 md:max-w-xs max-md:hidden" id="sidebar">
 				<?php foreach ($this->getSidebar() as $boxName => $box) : ?>
 					<div
