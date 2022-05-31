@@ -1,5 +1,5 @@
 .personal-tools li {
-  @apply mr-2;
+  @apply mr-2 mb-0;
 }
 
 .sidebar-list {
@@ -10,7 +10,7 @@
 
 .content-actions {
   li {
-      @apply font-mono text-sm bg-brown-800 border border-brown-500 text-brown-300 px-2 py-1 leading-none;
+      @apply font-mono text-sm bg-brown-800 border border-brown-500 text-brown-300 px-2 py-1 leading-none mb-0;
       a {
           @apply text-brown-300;
       }
@@ -51,8 +51,12 @@
 .catlinks {
   @apply p-2 bg-brown-900 border border-brown-500 mt-4;
 
+  ul {
+    @apply mb-0;
+  }
+
   li {
-      border-left: 1px solid #5c6370;
+      @apply mb-0;
 
       a {
           @apply text-brown-400;
@@ -96,6 +100,12 @@ div.mw-search-profile-tabs {
 
 .toc {
   @apply bg-brown-900 border border-brown-500 p-4;
+  ul {
+    @apply mb-0;
+  }
+  li {
+    @apply mb-0;
+  }
 }
 
 #mw-toc-heading {

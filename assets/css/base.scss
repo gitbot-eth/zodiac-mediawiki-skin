@@ -11,19 +11,19 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-brown-100 leading-none p-0 m-0 mt-8 mb-2 pb-2 border-b border-brown-500;
+  @apply text-brown-100 leading-none p-0 m-0 mt-12 mb-4 pb-2 border-b border-brown-500;
 }
 
 h1 {
-  @apply text-3xl;
+  @apply text-4xl;
 }
 
 h2 {
-  @apply text-2xl;
+  @apply text-3xl;
 }
 
 h3 {
-  @apply text-xl;
+  @apply text-2xl text-brown-400;
 }
 
 h4 {
@@ -32,6 +32,17 @@ h4 {
 
 h6 {
   @apply text-sm;
+}
+
+
+.main-content {
+  ul {
+    margin-bottom: 2rem;
+  }
+  
+  li {
+    margin-bottom: 1rem;
+  }
 }
 
 .thumb {
@@ -64,6 +75,10 @@ table.wikitable, table.mw-datatable, table.mw-abuselog-details {
 
   td {
       background: #201912 !important;
+  }
+
+  .center a img {
+    @apply mx-auto;
   }
 }
 

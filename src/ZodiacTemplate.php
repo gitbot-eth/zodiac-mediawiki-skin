@@ -57,7 +57,7 @@ class ZodiacTemplate extends BaseTemplate
 		</div>
 	</div>
 
-	<div class="flex flex-col flex-grow px-2 md:px-6">
+	<div class="flex flex-col flex-grow px-2 mb-20 md:px-6">
 		<div class="grid grid-cols-12 gap-6 lg:gap-12 mx-auto max-w-screen-xl">
 			<div class="flex-none space-y-4 col-start-1 col-end-13 md:col-end-5 lg:col-end-4 max-md:hidden" id="sidebar">
 				<?php foreach ($this->getSidebar() as $boxName => $box) : ?>
@@ -92,8 +92,8 @@ class ZodiacTemplate extends BaseTemplate
 			</div>
 			<div class="flex-1 col-start-1 col-span-12 md:col-start-5 lg:col-start-4 md:col-span-9">
 				<div id="p-cactions">
-					<div class="container md:flex items-center justify-between mx-auto mb-4">
-						<ul class="flex flex-wrap items-center list-reset space-x-2 content-actions">
+					<div class="container md:flex flex-end justify-between mx-auto mb-2">
+						<ul class="flex flex-wrap content-end list-reset space-x-2 content-actions">
 							<?php foreach ($this->data['content_actions'] as $key => $tab) {
 								echo $this->makeListItem($key, $tab);
 							} ?>
@@ -104,7 +104,7 @@ class ZodiacTemplate extends BaseTemplate
 						</form>
 					</div>
 				</div>
-				<div class="p-6 mx-auto border-2 border-double shadow-2xl border-brown-500 bg-brown-900 bg-opacity-80 bg-blur-12">
+				<div class="p-6 mx-auto border-2 border-double shadow-2xl border-brown-500 bg-brown-900 bg-opacity-80 bg-blur-12 main-content">
 
 					<?php if ($this->data['newtalk']) : ?>
 							<div class="line-usermessage">
@@ -119,53 +119,14 @@ class ZodiacTemplate extends BaseTemplate
 						<div class="page-title">
 
 							<?php echo $this->getIndicators(); ?>
-							<h1 class="p-0 m-0 leading-none"><?php $this->html('title'); ?></h1>
+							<h1 class="p-0 m-0 leading-none">
+								<?php echo str_replace(["Category:", "File:"], "", $this->data['title']); ?>
+							</h1>
 
-							<?php if ($this->data['isarticle']) {
-								echo '<div class="text-xs text-brown-500 mt-1">';
-								$this->msg('tagline');
-								echo '</div>';
-							} ?>
-
-							<?php $this->html('subtitle'); ?>
 							<?php $this->html('undelete'); ?>
 						</div>
 
 					<div class="lg:flex flex-row-reverse">
-						<!-- Info Box
-						<div class="lg:w-64 lg:ml-6 info-box">
-							<div class="bg-brown-900 border border-brown-500 p-4">
-								<h3 class="mt-0">Exit Pattern</h3>
-								<img src="/w/skins/zodiac/assets/images/exit-badge.png" alt="Exit Pattern" class="w-full object-center object-contain h-24 mt-4" />
-								<div class="flex justify-between items-center mt-4 font-mono text-sm">
-									Pattern
-									<a href="#">
-										Exit
-									</a>
-								</div>
-								<div class="flex justify-between items-center mt-4 font-mono text-sm">
-									Type
-									<a href="#">
-										Module
-									</a>
-								</div>
-								<div class="flex justify-between items-center mt-4 font-mono text-sm">
-									Repository
-									<a href="#">
-										Github
-									</a>
-								</div>
-								<div class="flex justify-between items-center mt-4 font-mono text-sm">
-									App
-									<a href="#">
-										Exit App
-									</a>
-								</div>
-								<div class="border-t border-brown-500 pt-4 mt-4 text-xs text-brown-200">
-									The Zodiac Exit Module allows members to redeem a designated token, including an NFT, for a proportional share of an avatar's (account's) digital assets, similar to Moloch DAO's rageQuit() function. Members can use the Exit App to redeem their tokens.
-								</div>
-							</div>
-						</div> -->
 						<div class="flex-1 mt-6 lg:mt-0">
 							<div class="articlebody">
 								<?php $this->html('bodytext'); ?>
