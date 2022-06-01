@@ -645,6 +645,13 @@ h6 {
   font-size: 0.875rem;
 }
 
+b, strong {
+  font-weight: 900;
+  --text-opacity: 1;
+  color: #E3DCD4;
+  color: rgba(227, 220, 212, var(--text-opacity));
+}
+
 .main-content ul {
   margin-bottom: 2rem;
 }

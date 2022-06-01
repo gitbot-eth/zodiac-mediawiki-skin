@@ -34,6 +34,9 @@ h6 {
   @apply text-sm;
 }
 
+b, strong {
+  @apply font-black text-brown-100;
+}
 
 .main-content {
   ul {
