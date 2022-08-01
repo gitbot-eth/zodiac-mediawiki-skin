@@ -1,4 +1,5 @@
 ## Activating the skin in a MediaWiki instance
+*The skin is only tested on MediaWiki version 1.37.*
 1. **Get the skin:** 
 Clone this repo into the MediaWiki's `skins` directory: 
 ```
