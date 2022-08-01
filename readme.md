@@ -3,7 +3,7 @@
 Clone this repo into the MediaWiki's `skins` directory: 
 ```
 cd skins
-git clone https://github.com/gitbot-eth/zodiac-wikimedia-skin.git zodiac
+git clone https://github.com/gnosis/zodiac-mediawiki-skin.git zodiac
 ```
 
 2. **Activate the skin:** 
