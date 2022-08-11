@@ -1,4 +1,24 @@
-## Development environment setup
+## Activating the skin in a MediaWiki instance
+*The skin is only tested on MediaWiki version 1.37.*
+1. **Get the skin:** 
+Clone this repo into the MediaWiki's `skins` directory: 
+```
+cd skins
+git clone https://github.com/gnosis/zodiac-mediawiki-skin.git zodiac
+```
+
+2. **Activate the skin:** 
+In the `LocalSettings.php` file (located at the root of the MediaWiki directory):
+   1. Add `wfLoadSkin( 'zodiac' );` above the `$wgDefaultSkin` variable.
+   2. Set `$wgDefaultSkin = "zodiac";`.
+   
+
+## How to activate changes during development
+When developing, open the zodiac-skin directory directly (`skins/zodiac`).
+Then install dependencies via `npm install`. When your changes are done, activate the changes via `npm dev`.
+
+
+## Setting up a general MediaWiki development environment
 
 1. `git clone --depth=1 https://gerrit.wikimedia.org/r/mediawiki/core.git mediawiki`
 2. `cd mediawiki`
@@ -19,18 +39,4 @@
 5. `docker-compose up -d`
 6. `docker-compose exec mediawiki composer update`
 7. `docker-compose exec mediawiki /bin/bash /docker/install.sh`
-8. open "localhost:8080"
-9. `cd skins/`
-10. `git clone https://github.com/gitbot-eth/zodiac-wikimedia-skin.git zodiac`
-11. open LocalSettings.php (at the root of the mediawiki directory)
-12. add `wfLoadSkin( 'zodiac' );` to the LocalSettings.php file, above the `$wgDefaultSkin` variable.
-13. set `$wgDefaultSkin = "zodiac";`
-14. save the file
-15. refresh "localhost:8080"
-16. when developing, open the zodiac project directly (for instance via: `cd skins/zodiac` then `code .`)
-
-**In the skin/zodiac folder run:**
-
-17. `npm install`
-18. make your changes
-19. `npm dev` (or `npm run watch`)
+8. visit your MediaWiki at `localhost:8080`
