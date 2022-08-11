@@ -66,11 +66,11 @@ class ZodiacTemplate extends BaseTemplate
 						id="<?php echo Sanitizer::escapeIdForAttribute($box['id']) ?>" <?php echo Linker::tooltip($box['id']) ?>
 					>
 						<?php if($box['id'] === 'p-Patterns') : ?>
-							<img class="w-8 h-8 mb-1" src="<?php echo $GLOBALS['wgResourceBasePath'] ?>/skins/zodiac/assets/images/patterns-orb.png" alt="Patterns Category orb" />
+							<img class="w-8 h-8 mb-1" src="<?php echo $GLOBALS['wgResourceBasePath'] ?>/skins/zodiac/assets/images/wiki_PATTERN.png" alt="Patterns Category orb" />
 						<?php elseif($box['id'] === 'p-Library') : ?>
-							<img class="w-8 h-8 mb-1" src="<?php echo $GLOBALS['wgResourceBasePath'] ?>/skins/zodiac/assets/images/library-orb.png" alt="Library Category orb" />
+							<img class="w-8 h-8 mb-1" src="<?php echo $GLOBALS['wgResourceBasePath'] ?>/skins/zodiac/assets/images/wiki_LIBRARY.png" alt="Library Category orb" />
 						<?php elseif($box['id'] === 'p-Documentation') : ?>
-							<img class="w-8 h-8 mb-1" src="<?php echo $GLOBALS['wgResourceBasePath'] ?>/skins/zodiac/assets/images/documentation-orb.png" alt="Documentation Category orb" />
+							<img class="w-8 h-8 mb-1" src="<?php echo $GLOBALS['wgResourceBasePath'] ?>/skins/zodiac/assets/images/wiki_DOCUMENTATION.png" alt="Documentation Category orb" />
 						<?php endif ?>
 						<h5 class="mt-0 font-mono mb-4">
 							<?php echo htmlspecialchars($box['header']); ?>
